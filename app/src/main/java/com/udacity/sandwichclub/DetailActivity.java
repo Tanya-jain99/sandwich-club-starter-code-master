@@ -33,7 +33,7 @@ public class DetailActivity extends AppCompatActivity {
         mIngredientsTextView = findViewById(R.id.ingredients_tv);
         mDescription = findViewById(R.id.description_tv);
         ImageView ingredientsIv = findViewById(R.id.image_iv);
-
+        //This catches the intent
         Intent intent = getIntent();
         if (intent == null) {
             closeOnError();
@@ -81,5 +81,6 @@ public class DetailActivity extends AppCompatActivity {
         mAlsoKnowAsView.setText(TextUtils.join(", ", mSandwich.getAlsoKnownAs()));
         mIngredientsTextView.setText(TextUtils.join(", ", mSandwich.getIngredients()));
         mDescription.setText(mSandwich.getDescription());
+
     }
 }
